@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <!-- Script -->
+  <script defer src="./index.js"></script>
+  
+  <title>Frontend Mentor | Contact form</title>
+
+</head>
+<body>
+
+  <main>
+
+    <form novalidate>
+
+      <h1>Contact Us</h1>
+      
+      <!-- First Name Section -->
+      <div id="firstNameContainer" class="container">
+        <!-- Label -->
+        <div class="labelContainer">
+          <label for="firstName">
+            First name
+            <span>*</span>
+          </label>
+        </div>
+        <!-- Input -->
+        <div class="inputContainer">
+          <input type="text" id="firstsName" name="firstsName" autocomplete="name" required>
+          <span class="error"></span>
+        </div>
+      </div>      
+
+      <!-- Last Name Section -->
+      <div id="lastNameContainer" class="container">
+        <!-- Label -->
+        <div class="labelContainer">
+          <label for="lastName">
+            Last Name
+            <span>*</span>
+          </label>
+        </div>
+        <!-- Input -->
+        <div class="inputContainer">
+          <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
+          <span class="error"></span>
+        </div>
+      </div>
+
+      <!-- Email Name Section -->
+      <div id="emailContainer" class="container">
+        <!-- Label -->
+        <div class="labelContainer">
+          <label for="email">
+            Email
+            <span>*</span>
+          </label>
+        </div>
+        <!-- Input -->
+        <div class="inputContainer">
+          <input type="text" id="email" name="email" autocomplete="email" required>
+          <span class="error"></span>
+        </div>
+      </div>
+      
+      <!-- Query Type Section -->
+      <div id="queryTypeContainer" class="container">
+        <!-- Label -->
+        <div class="labelContainer">
+          <label for="queryType" id="queryTypeLabel">Query Type 
+          <span class="required">*</span>
+        </div>
+        <!-- Input  -->
+        <div class="inputContainer">
+          <fieldset required>
+            <div class="inputWrapper">
+              <label for="general">
+                <input type="radio" name="enquiry" id="general" value="General Enquiry">
+                General Enquiry
+              </label>
+            </div>
+            <!-- Input -->
+            <div class="inputWrapper">
+              <label for="support">
+                <input type="radio" name="enquiry" id="support" value="Support Request">
+                Support Request
+              </label>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <!-- Message Section -->
+      <div id="messageContainer" class="container">
+        <!-- Label -->
+        <div class="labelContainer">
+          <label for="message">
+            Message
+            <span>*</span>
+          </label>
+        </div>
+        <!-- Input -->
+        <div class="inputContainer">
+          <textarea id="message" name="message" rows="6" maxlength="800" required></textarea>
+          <span class="error"></span>
+        </div>
+      </div>
+
+      <div id="consentContainer" class="container">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent">I consent to being contacted by the team <span>*</span></label>
+        <span class="error"></span>
+      </div>
+      
+      <div id="submit">
+        <button type="submit" id="submitButton">Submit</button>
+        <span id="successMessage"><strong>Message Sent!</strong> Thanks for completing the form. We'll be in touch soon!</span>
+      </div>
+
+    </form>
+
+  </main>
+  
+</body>
+</html>

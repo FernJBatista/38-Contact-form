@@ -1,0 +1,369 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --Green-200: #dff1e7;
+  --Green-600: #0c7d69;
+  --Red: #d73c3c;
+  --White: #ffffff;
+  --Grey-500: #87a3a6;
+  --Grey-900: #2b4246;
+}
+
+h1 {
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--Grey-900);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+strong {
+  font-weight: 700;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Karla", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Green-200);
+  padding: clamp(1rem, 2.5vw, 5rem);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-radius: 1rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  background-color: var(--White);
+  width: 100%;
+  max-width: 45rem;
+}
+main form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(7, auto);
+  row-gap: 1.5rem;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  width: 100%;
+  /* General styles for all input sections */
+  /* Individual styles for each section start here */
+  /* Bottom section styles */
+}
+@media screen and (max-width: 40rem) {
+  main form {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, auto);
+    row-gap: 1rem;
+  }
+}
+main form h1 {
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+main form .container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+main form .container .labelContainer {
+  display: flex;
+  flex-direction: row;
+}
+main form .container .labelContainer label {
+  font-size: 1rem;
+  color: var(--Grey-900);
+}
+main form .container .labelContainer label span {
+  color: var(--Red);
+}
+main form .container .inputContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+main form .container .inputContainer input {
+  border-radius: 0.5rem;
+  padding: 0.875rem;
+  font-size: 1rem;
+  border: 1px solid var(--Grey-500);
+}
+main form .container .inputContainer input:focus {
+  outline: 2px solid #0c7d69;
+}
+main form .container .inputContainer .error {
+  position: absolute;
+  bottom: -1.15rem;
+  font-size: 0.75rem;
+  color: var(--Red);
+}
+main form #firstNameContainer {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+main form #lastNameContainer {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+@media screen and (max-width: 40rem) {
+  main form #lastNameContainer {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+}
+main form #emailContainer {
+  grid-row: 3/4;
+  grid-column: 1/3;
+}
+@media screen and (max-width: 40rem) {
+  main form #emailContainer {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+}
+main form #queryTypeContainer {
+  grid-row: 4/5;
+  grid-column: 1/3;
+}
+@media screen and (max-width: 40rem) {
+  main form #queryTypeContainer {
+    grid-row: 5/6;
+    grid-column: 1/2;
+  }
+}
+main form #queryTypeContainer fieldset {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+@media screen and (max-width: 40rem) {
+  main form #queryTypeContainer fieldset {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+main form #queryTypeContainer fieldset .inputWrapper {
+  padding: 1rem;
+  border: 1px solid var(--Grey-500);
+  border-radius: 0.5rem;
+  width: 100%;
+}
+main form #messageContainer {
+  grid-row: 5/6;
+  grid-column: 1/3;
+}
+@media screen and (max-width: 40rem) {
+  main form #messageContainer {
+    grid-row: 6/7;
+    grid-column: 1/2;
+  }
+}
+main form #messageContainer textarea {
+  border-radius: 0.5rem;
+  border: 1px solid var(--Grey-500);
+}
+main form #consentContainer {
+  grid-row: 6/7;
+  grid-column: 1/3;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+@media screen and (max-width: 40rem) {
+  main form #consentContainer {
+    grid-row: 7/8;
+    grid-column: 1/2;
+  }
+}
+main form #consentContainer label {
+  font-size: 1rem;
+  color: var(--Grey-900);
+}
+main form #consentContainer label span {
+  color: var(--Red);
+}
+main form #submit {
+  position: relative;
+  grid-row: 7/8;
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.875rem;
+}
+@media screen and (max-width: 40rem) {
+  main form #submit {
+    grid-row: 8/9;
+    grid-column: 1/2;
+  }
+}
+main form #submit button {
+  z-index: 2;
+  grid-row: 7/8;
+  grid-column: 1/3;
+  padding: 1rem;
+  width: 100%;
+  color: var(--White);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--Green-600);
+}
+main form #submit #successMessage {
+  position: absolute;
+  z-index: 0;
+  visibility: hidden;
+  opacity: 0;
+  bottom: 0;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  color: var(--Green-600);
+  transition: all 0.5s ease-in-out;
+}
+main form #submit #successMessage.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: -0.725rem;
+}/*# sourceMappingURL=styles.css.map */
