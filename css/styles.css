@@ -285,7 +285,7 @@ main form #queryTypeContainer fieldset {
     gap: 0.5rem;
   }
 }
-main form #queryTypeContainer fieldset .inputWrapper {
+main form #queryTypeContainer fieldset label {
   padding: 1rem;
   border: 1px solid var(--Grey-500);
   border-radius: 0.5rem;

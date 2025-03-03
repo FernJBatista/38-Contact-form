@@ -39,8 +39,8 @@
         </div>
         <!-- Input -->
         <div class="inputContainer">
-          <input type="text" id="firstName" name="firstName" autocomplete="name" required>
-          <span class="error"></span>
+          <input type="text" id="firstName" name="firstName" autocomplete="name" required aria-required="true">
+          <span class="error" aria-live="polite"></span>
         </div>
       </div>      
 
@@ -55,8 +55,8 @@
         </div>
         <!-- Input -->
         <div class="inputContainer">
-          <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
-          <span class="error"></span>
+          <input type="text" id="lastName" name="lastName" autocomplete="family-name" required aria-required="true">
+          <span class="error" aria-live="polite"></span>
         </div>
       </div>
 
@@ -71,8 +71,8 @@
         </div>
         <!-- Input -->
         <div class="inputContainer">
-          <input type="text" id="email" name="email" autocomplete="email" required>
-          <span class="error"></span>
+          <input type="text" id="email" name="email" autocomplete="email" required aria-required="true">
+          <span class="error" aria-live="polite"></span>
         </div>
       </div>
       
@@ -86,19 +86,15 @@
         <!-- Input  -->
         <div class="inputContainer">
           <fieldset required>
-            <div class="inputWrapper">
               <label for="general">
                 <input type="radio" name="enquiry" id="general" value="General Enquiry">
                 General Enquiry
               </label>
-            </div>
             <!-- Input -->
-            <div class="inputWrapper">
               <label for="support">
                 <input type="radio" name="enquiry" id="support" value="Support Request">
                 Support Request
               </label>
-            </div>
           </fieldset>
         </div>
       </div>
@@ -114,20 +110,20 @@
         </div>
         <!-- Input -->
         <div class="inputContainer">
-          <textarea id="message" name="message" rows="6" maxlength="800" required></textarea>
-          <span class="error"></span>
+          <textarea id="message" name="message" rows="6" maxlength="800" required aria-required="true"></textarea>
+          <span class="error" aria-live="polite"></span>
         </div>
       </div>
 
       <div id="consentContainer" class="container">
-        <input type="checkbox" id="consent" name="consent" required>
+        <input type="checkbox" id="consent" name="consent" required aria-required="true">
         <label for="consent">I consent to being contacted by the team <span>*</span></label>
-        <span class="error"></span>
+        <span class="error" aria-live="polite"></span>
       </div>
       
       <div id="submit">
         <button type="submit" id="submitButton">Submit</button>
-        <span id="successMessage"><strong>Message Sent!</strong> Thanks for completing the form. We'll be in touch soon!</span>
+        <span id="successMessage" aria-live="assertive" output="status"><strong>Message Sent!</strong> Thanks for completing the form. We'll be in touch soon!</span>
       </div>
 
     </form>
