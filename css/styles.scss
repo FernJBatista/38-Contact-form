@@ -396,10 +396,18 @@ main {
                 color: var(--Green-600);
                 transition: all 0.5s ease-in-out;
 
+                @media screen and (max-width: 40rem) {
+                    font-size: 0.65rem;
+                }
+
                 &.active {
                     visibility: visible;
                     opacity: 1;
-                    bottom: -0.725rem
+                    bottom: -0.725rem;
+
+                    @media screen and (max-width: 40rem) {
+                        bottom: -0.5rem;
+                    }
                 }
             }
         }

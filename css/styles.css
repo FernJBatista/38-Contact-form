@@ -372,8 +372,18 @@ main form #submit #successMessage {
   color: var(--Green-600);
   transition: all 0.5s ease-in-out;
 }
+@media screen and (max-width: 40rem) {
+  main form #submit #successMessage {
+    font-size: 0.65rem;
+  }
+}
 main form #submit #successMessage.active {
   visibility: visible;
   opacity: 1;
   bottom: -0.725rem;
+}
+@media screen and (max-width: 40rem) {
+  main form #submit #successMessage.active {
+    bottom: -0.5rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

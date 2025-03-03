@@ -70,9 +70,9 @@ form.addEventListener('submit', (event) => {
         successMessage.classList.remove('active');
     } else {
         successMessage.classList.add('active')
-        setTimeout(() => {
+        /* setTimeout(() => {
             successMessage.classList.remove('active');
-        }, 5000);
+        }, 5000); */
     }
 });
 
