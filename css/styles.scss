@@ -171,10 +171,13 @@ body {
     font-family: 'Karla', sans-serif;
     height: 100vh;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     background-color: var(--Green-200);
     padding: clamp(1rem, 2.5vw, 5rem);
+    
+    @media screen and (max-width: 40rem) {
+        align-items: flex-start;
 }
 
 main {
