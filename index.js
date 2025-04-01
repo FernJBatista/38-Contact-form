@@ -49,6 +49,9 @@ form.addEventListener('submit', (event) => {
         document.querySelector('#emailContainer .error').innerHTML = '';
     }
 
+    // Validate query type
+    
+
     // Validate message
     if (data.message === '') {
         document.querySelector('#messageContainer .error').innerHTML = 'Message is required';
@@ -70,9 +73,9 @@ form.addEventListener('submit', (event) => {
         successMessage.classList.remove('active');
     } else {
         successMessage.classList.add('active')
-        /* setTimeout(() => {
+        setTimeout(() => {
             successMessage.classList.remove('active');
-        }, 5000); */
+        }, 5000);
     }
 });
 
